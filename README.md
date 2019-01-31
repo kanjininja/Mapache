@@ -8,9 +8,9 @@
 Hi. I created this theme for ghost especially for you.
 It is available for free so you can use on your site. It is strictly forbidden to use it for commercial use. If you have any suggestions to improve the theme,  you can send me a tweet [@GodoFredoNinja](https://goo.gl/y3aivK)
 
-## 🙏 Please, help me with a small donation [here](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=Y7UB5Q8GVN3HN&source=url) or [PayPal](https://www.paypal.me/godofredoninja). It'll help motivate me to update the theme with many improvements
+## 🙏 Please, help me with a small donation [here](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4H53Q4RTPSFQW&source=url) or [PayPal](https://www.paypal.me/godofredoninja). It'll help motivate me to update the theme with many improvements
 
-[![donate](./donate.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=Y7UB5Q8GVN3HN&source=url)
+[![donate](./donate.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4H53Q4RTPSFQW&source=url)
 
 ![mapache theme for ghost](./screenshot.jpg)
 
@@ -56,33 +56,26 @@ You can see mapache in action on my Page [Demo](https://goo.gl/V7moIY)
 
 ## Table of Contents
 
-- [Mapache free theme for Ghost](#mapache-free-theme-for-ghost)
-  - [🙏 Please, help me with a small donation here or PayPal. It'll help motivate me to update the theme with many improvements](#-please-help-me-with-a-small-donation-here-or-paypal-itll-help-motivate-me-to-update-the-theme-with-many-improvements)
-  - [Demo](#demo)
-  - [Featured](#featured)
-  - [Table of Contents](#table-of-contents)
-  - [Web Browser Support for mapache](#web-browser-support-for-mapache)
-  - [Ghost Settings](#ghost-settings)
-  - [Mapache Settings](#mapache-settings)
-    - [1. Social Media](#1-social-media)
-    - [2. Footer Menu](#2-footer-menu)
-    - [3. YouTube Subscribe Button](#3-youtube-subscribe-button)
-    - [4. Instagram](#4-instagram)
-    - [5. Comments](#5-comments)
-    - [6. Search](#6-search)
-  - [Theme Translation](#theme-translation)
-  - [AMP](#amp)
-  - [Home Page](#home-page)
-  - [Post Format](#post-format)
-  - [Tags Page](#tags-page)
-  - [Newsletter Page](#newsletter-page)
-  - [Podcast Page](#podcast-page)
-  - [Ads](#ads)
-  - [Change Theme Color](#change-theme-color)
-    - [Warning - Note - Success](#warning---note---success)
-    - [PrismJS code syntax](#prismjs-code-syntax)
-    - [Credits](#credits)
-  - [Copyright & License](#copyright--license)
+- [Web Browser Support for mapache](#web-browser-support-for-mapache)
+- [Ghost Settings](#ghost-settings)
+- [Mapache Settings](#mapache-settings)
+  - [1. Social Media](#1-social-media)
+  - [2. Footer Menu](#2-footer-menu)
+  - [3. YouTube Subscribe Button](#3-youtube-subscribe-button)
+  - [4. Instagram](#4-instagram)
+  - [5. Comments](#5-comments)
+  - [6. Search](#6-search)
+- [Theme Translation](#theme-translation)
+- [AMP](#amp)
+- [Home Page](#home-page)
+- [Post Format](#post-format)
+- [Tags Page](#tags-page)
+- [Newsletter Page](#newsletter-page)
+- [Podcast Page](#podcast-page)
+- [Ads](#ads)
+- [Change Theme Color](#change-theme-color)
+- [Warning - Note - Success](#warning---note---success)
+- [PrismJS code syntax](#prismjs-code-syntax)
 
 ## Web Browser Support for mapache
 
@@ -132,6 +125,22 @@ Mapache supports Disqus comments and Facebook comments as well as comment counti
 ### 6. Search
 
 The default search engine will only search the titles of the post
+
+#### Setup a Custom integration
+
+1. Go in your Ghost's dashboard -> Integrations -> Add custom integration
+2. Set a name: GodoFredo Themes Search
+3. Get the Content API Key and replace the demo key with this one
+4. Get the admin domain. This will be different in some cases
+
+```html
+<script>
+  var searchSettings = {
+    key: 'ADD_YOUR_API_KEY',
+    host: 'https://demo.ghost.io',
+  };
+</script>
+```
 
 The search engine that includes Mapache is very powerful, supports almost all languages and you can customize to your liking.
 
@@ -195,14 +204,16 @@ var facebookLocaleComments = 'en_US';
 
 /* 06. Search Settings */
 var searchSettings = {
+  key: 'ADD_YOUR_API_KEY',
+  host: 'https://demo.ghost.io',
+  /* This is optional */
   options: {
     keys: [
       'title',
     ],
     limit: 10,
-    threshold: -3500,
-    allowTypo: false,
   },
+  /* This is optional to perform filtering of the ghost api */
   api: {
     resource: 'posts',
     parameters: {
