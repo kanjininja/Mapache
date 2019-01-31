@@ -14,7 +14,7 @@
 
         {{!-- Datetime - readingTime  --}}
         <div class="u-block">
-            <time class="datetime" datetime="{{date format=" YYYY-MM-DD "}}">{{t "Published"}} {{date published_at timeago="true"}}</time>
+            <time class="datetime" datetime="{{date format=" YYYY.MM.DD "}}">{{t "Published"}} {{date published_at timeago="true"}}</time>
             <span class="point">—</span>
             <span class="readingTime">{{reading_time seconds=(t "< 1 min read") minute=(t "1 min read") minutes=(t "% min read")}}</span>
         </div>
@@ -25,7 +25,7 @@
             {{t "By"}} <a href="{{url}}" class="link link--underline u-fontWeightMedium u-textColorDarker" title="{{t "Posts by"}} {{name}}">{{name}}</a>
 
             {{!-- Author Social Media (Facebook - Twitter) --}}
-            {{#if facebook}}<a class="post-author-social u-fontSizeBase u-inlineBlock c-facebook i-facebook" href="{{facebook_url}}" title="Facebook" target="_blank" rel="noopener noreferrer"></a>{{/if}}
+            {{!-- #if facebook}}<a class="post-author-social u-fontSizeBase u-inlineBlock c-facebook i-facebook" href="{{facebook_url}}" title="Facebook" target="_blank" rel="noopener noreferrer"></a>{{/if --}}
             {{#if twitter}}<a class="post-author-social u-fontSizeBase u-inlineBlock c-twitter i-twitter" href="{{twitter_url}}" title="{{twitter}}" target="_blank" rel="noopener noreferrer"></a>{{/if}}
         </div>
 

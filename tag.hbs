@@ -22,7 +22,7 @@
 
             <div class="tag-body u-relative u-maxWidth740 u-container zindex3 u-fontSize20">
                 <h1 class="tag-title u-fontSize36 u-md-fontSizeBase">{{name}}</h1>
-                <p class="u-marginTop20 u-fontSizeBase">Total {{plural ../pagination.total empty='posts' singular='% post' plural='% posts'}}</p>
+                <p class="u-marginTop20 u-fontSizeBase">{{plural ../pagination.total empty=(t "No posts") singular=(t "1 post") plural=(t "% posts")}}</p>
                 {{#if description}}<p class="tag-description u-marginTop20 u-fontWeightThin">{{description}}</p>{{/if}}
             </div>
         </div>
